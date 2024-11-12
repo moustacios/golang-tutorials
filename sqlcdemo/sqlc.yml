@@ -1,0 +1,12 @@
+# ~/Workspace/sqlcdemo/sqlc.yml
+
+---
+version: "2"
+sql:
+  - engine: "mysql"
+    queries: "queries.sql"
+    schema: "schema.sql"
+    gen:
+      go:
+        package: "moustacios"
+        out: "moustacios"

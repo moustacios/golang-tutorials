@@ -1,0 +1,20 @@
+# ~/Workspace/sqlcdemo/docker-compose.yml
+
+services:
+
+  db:
+    image: mysql:lts
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: sqlcdemo
+      MYSQL_USER: sqlcdemo
+      MYSQL_PASSWORD: secret
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
